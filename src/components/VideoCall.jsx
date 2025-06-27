@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import AgoraRTC from 'agora-rtc-sdk-ng'
 import { VideoPlayer } from './VideoPlayer';
+import charImg from "../assets/char.webp"
 
-const TOKEN = "007eJxTYOBT1u6accbokpfuz9QC9lLfm8c8npc4hbX9sdl/RuGd0AYFhiQzI2Nzy+Rkc1MLcxNDU9MkS4Nk82Rzi7TkJGODJKMktbzYjIZARgZ7tWwmRgYIBPFZGEpSi0sYGADv6R2/";
+const TOKEN = "007eJxTYPATFtDs9haunMFw7qP+hTUuZbE+L2JWOmSrPKj8NHt52TwFhiQzI2Nzy+Rkc1MLcxNDU9MkS4Nk82Rzi7TkJGODJKOkHsH4jIZARgYp95cMjFAI4rMwlKQWlzAwAAC/rh2x";
 const APP_ID = "b62379cc75874155b90c7c78fcb30b2b";
 const CHANNEL = "test";
 
@@ -23,7 +24,7 @@ const VideoCall = () => {
         }
 
         if (mediaType === 'audio') {
-        // user.audioTrack.play()
+            user.audioTrack.play()
         }
     };
 
@@ -75,7 +76,10 @@ const VideoCall = () => {
     return (
         <div>
             {users.map(user => (
-                <VideoPlayer key={user.uid} user={user} />
+                <div className='video-character'>
+                    <img src={charImg} className='char-img' alt="" />
+                    <VideoPlayer key={user.uid} user={user} />
+                </div>
             ))}
         </div>
     )

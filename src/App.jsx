@@ -20,7 +20,6 @@ function App() {
         }
         { joined ? 
             <VideoCall /> : 
-            
             <></> 
         }
       </main>  

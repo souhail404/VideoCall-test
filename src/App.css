@@ -40,3 +40,23 @@
 .read-the-docs {
   color: #888;
 }
+
+
+.video-character{
+  width: 400px;
+  position: relative;
+  margin-inline: auto;
+
+}
+.char-img{
+  width: 100%;
+}
+
+.video-player{
+  position: absolute;
+  top: 13px;
+  left: 102px;
+  z-index: 10;
+  width: 45%;
+  height: 130px;
+}
